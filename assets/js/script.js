@@ -14,3 +14,18 @@ body.appendChild(h1El);
 
 var score = 0;
 
+for(var i = 0; i < questions.length; i++){
+    var answer = confirm(questions[i].q);
+
+    if(
+        (answer === true && questions[i].a === 't') ||
+        (answer ===false && questions[i].a === 'f')
+    ) {
+        score++;
+        alert('Corect!');
+    } else {
+        alert('Wrong');
+    }
+}
+
+alert('You got ' + score + '/' + questions.length);
